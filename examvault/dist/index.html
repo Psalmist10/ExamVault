@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ExamVault</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="auth-container">
+  <h2>Login to Your Exam Records</h2>
+  <input type="email" id="email" placeholder="Email" />
+  <input type="password" id="password" placeholder="Password" />
+  <button id="loginBtn">Login</button>
+  <button id="signupBtn">Sign Up</button>
+</div>
+
+<div class="container" style="display:none;">
+  <!-- Your exam record UI goes here -->
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ExamVault Database</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📘 ExamVault Database</h1>
+    <form id="recordForm">
+      <input type="text" id="name" placeholder="Student Name" required />
+      <input type="text" id="subject" placeholder="Subject" required />
+      <input type="number" id="score" placeholder="Score" required min="0" max="100" />
+      <button type="submit">Add Record</button>
+    </form>
+
+    <div class="actions">
+
+    <div class="records">
+      <h1>Student Records</h1>
+      <table id="recordTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Score</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="recordBody">
+          <!-- Records will be inserted here -->
+        </tbody>
+      </table>
+      <p id="averageScore">Average Score: 0</p>
+    </div>
+  </div>
+  <script src="script.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html> 
+<label for="importExcel">📥 Import Excel</label> <div class="actions"> <input type="file" id="importExcel" accept=".xlsx, .xls" /> 
+  <button id="clearAll">🗑️ Clear All</button>
+  <button id="exportExcel">📁 Export to Excel</button> 
+</div>
+<input type="text" id="classroom" placeholder="Classroom" />
+<input type="date" id="date" />
+<th>Classroom</th>
+<th>Date</th>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
